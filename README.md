@@ -3,7 +3,7 @@ The npm have been updated to work with the newest update of discord.js v12!
 
 Note: If the bot have muted someone for 3hr, 4min have passed then randomly the bot went offline, do not forget to remove the role from user once the rest 6min are gone or the it's muted forever! (will modify this later)
 
-Additional note: This version 2.1.0 is made to work with the discord.js version 12 and only that, if you try to use it with other version (lower obv), it won't work. For that, get version 1.0.6 and do not forget to fix the channel log to be "mod-logs".
+Additional note: This version 2.1.1 is made to work with the discord.js version 12 and only that, if you try to use it with other version (lower obv), it won't work. For that, get version 1.0.6 and do not forget to fix the channel log to be "mod-logs".
 
 Any other issues, please open it on [Github](https://github.com/RPGTheGreat/anti-spam)!
 ## antispam-guard.js
