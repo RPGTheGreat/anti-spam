@@ -69,6 +69,41 @@ const kickMessage = (options && options.kickMessage) || "was kicked";
          messageLog.splice(x);
        }
      }
+     
+     punishedList.push(m.author.id);
+       let user = m.guild.members.cache.get(m.author.id);
+       let channel = m.guild.channels.cache.find (c => c.name === logsChannel);
+       if (!channel){
+         try {
+           channel =  m.guild.channels.create('mod-logs', {
+             type: 'text',
+             permissionOverwrites:[{
+               id:m.guild.id,
+               deny: ['VIEW_CHANNEL']
+             }]
+           })
+              
+        .then (m=> m.send(`Created **\`mod-logs\`** Channel`))
+           .catch(console.error)
+         }catch (e) {
+           console.log (e.stack);
+         }
+       };
+    if (user) {
+      user.ban.then (()=>{
+        m.channel.send(`${m.author.tag}, ${banMessage}`)
+        let kickembed = new MessageEmbed()
+        .setTitle("Action Banned")
+        .setTimestamp()
+        .setColor ("RANDOM")
+        .addField("Member",`${user}`)
+        .addField("Reason",`Automodration`)
+        channel.send(kickembed)
+      }).catch((e) => {
+        m.guild.owner.send(`I don't have permission to use automoderation`)
+      })
+    }
+     
    }
      
      const kickMember = (m, kickMessage) => {
