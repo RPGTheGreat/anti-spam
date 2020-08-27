@@ -123,5 +123,4 @@ P.S 2: This is just a release that is modified by me to suit the best my needs. 
 
 P.S 3: Remember if you don't get any notification in #mod-logs, that means you haven't added with lowercase the name of  logchannel in config (this is because discord channels cannot have uppercase for some reasons but voice channels can.
 
-P.S 4: If you have any problem join our support server[Discord]
-(https://discord.gg/yqAGXbz)
+P.S 4: If you have any problem join our support server[Discord](https://discord.gg/yqAGXbz)
