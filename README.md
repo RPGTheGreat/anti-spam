@@ -1,9 +1,9 @@
 # Update: 
 The npm have been updated to work with the newest update of discord.js v12!
 
-Note: If the bot have muted someone for 3hr, 4min have passed then randomly the bot went offline, do not forget to remove the role from user once the rest 6min are gone or the it's muted forever! (will modify this later)
+Note: If the bot have muted someone for 3hr, 4min have passed then randomly the bot went offline, do not forget to remove the role from user once the rest 90min are gone or the it's muted forever! (will modify this later)
 
-Additional note: This version 2.1.1 is made to work with the discord.js version 12 and only that, if you try to use it with other version (lower obv), it won't work. For that, get version 1.0.6 and do not forget to fix the channel log to be "mod-logs".
+Additional note: This version 2.2.0 is made to work with the discord.js version 12 and only that!
 
 Any other issues, please open it on [Github](https://github.com/RPGTheGreat/anti-spam)!
 ## antispam-guard.js
@@ -39,7 +39,9 @@ client.on('ready', () => {
         maxDuplicatesWarning: 7,// When people are spamming the same message, this will trigger when member X sent over 7+ messages.
         maxDuplicatesMute: 10, // The limit where member X get muted after sending too many messages(10+).
         ignoredRoles: ["Admin"], // The members with this role(or roles) will be ignored if they have it. Suggest to not add this to any random guys. Also it's case sensitive.
-        ignoredMembers: ["Discord#0000"], // These members are directly affected and they do not require to have the role above. Good for undercover pranks.
+        ignoredMembers: ["Discord#0000"],// These members are directly affected and they do not require to have the role above. Good for undercover pranks.
+        ignoreBots: true //These bots are directly affected and they do not require to have the role above
+        ignoredChannels: ["general_chat"], //These channels are directly affected
 		mutedRole: "Muted", // Here you put the name of the role that should not let people write/speak or anything else in your server. If there is no role set, by default, the module will attempt to create the role for you & set it correctly for every channel in your server. It will be named "muted".
 		timeMuted: 9000 * 600, // This is how much time member X will be muted. if not set, default would be 90 min.
 		logChannel: "mod-logs" // This is the channel where every report about spamming goes to. If it's not set up, it will attempt to create the channel.
@@ -86,6 +88,8 @@ antispam(client, {
         maxDuplicatesMute: 10,
         ignoredRoles: [],
         ignoredMembers: [],
+        ignoreBots: ,
+        ignoredChannels: [],
 		mutedRole:"",
 		timeMuted: 1000*600,
 		logChannel: ""
@@ -104,6 +108,8 @@ antispam(client, {
 `maxDuplicatesMute` - Optional, Type: Integer<br>
 `ignoredRoles` - Optional, Type: Array<br>
 `ignoredMembers`- Optional, Type: Array<br>
+`ignoredChannels` - Optional, Type: String <br>
+`ignoreBots` - Optional, Type: String<br>
 `mutedRole`- Optional, Type: String<br>
 `timeMuted`- Optional, Type: Integer<br>
 `logChannel`- Optional, Type: String<br>
