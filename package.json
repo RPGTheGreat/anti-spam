@@ -1,0 +1,30 @@
+{
+  "name": "antispam-guard",
+  "version": "3.0.0",
+  "description": "A simple module help you to make automoderation very easily",
+  "main": "antispam.js",
+  "scripts": {
+    "test": "echo \"No test specified\"",
+    "start": "node antispam.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RPGTheGreat/anti-spam.git"
+  },
+  "keywords": [
+    "discord",
+    "antispam",
+    "module",
+    "spam",
+    "discord.js"
+  ],
+  "author": "RPGTheGreat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RPGTheGreat/anti-spam/issues"
+  },
+  "homepage": "https://github.com/RPGTheGreat/anti-spam#readme",
+  "dependencies": {
+    "discord.js": "^12.3.1"
+  }
+}

@@ -38,8 +38,9 @@ client.on('ready', () => {
         maxDuplicatesMute: 10, // The limit where member X get muted after sending too many messages(10+).
         ignoredRoles: ["Admin"], // The members with this role(or roles) will be ignored if they have it. Suggest to not add this to any random guys. Also it's case sensitive.
         ignoredMembers: ["Discord#0000"],// These members are directly affected and they do not require to have the role above. Good for undercover pranks.
-        ignoreBots: true //These bots are directly affected and they do not require to have the role above
+        ignoreBots: true, //These bots are directly affected and they do not require to have the role above
         ignoredChannels: ["general_chat"], //These channels are directly affected
+        ignorePermissions: ["ADMINISTRATOR"], //Who have admin perms are directly affected
 		mutedRole: "Muted", // Here you put the name of the role that should not let people write/speak or anything else in your server. If there is no role set, by default, the module will attempt to create the role for you & set it correctly for every channel in your server. It will be named "muted".
 		timeMuted: 9000 * 600, // This is how much time member X will be muted. if not set, default would be 90 min.
 		logChannel: "mod-logs" // This is the channel where every report about spamming goes to. If it's not set up, it will attempt to create the channel.
@@ -52,7 +53,7 @@ client.on('message', msg => {
   client.emit('checkMessage', msg); // This runs the filter on any message bot receives in any guilds.
   
   // Rest of your code
-}
+})
 
 client.login("token");
 ```
@@ -88,6 +89,7 @@ antispam(client, {
         ignoredMembers: [],
         ignoreBots: ,
         ignoredChannels: [],
+       ignorePermissions: [];
 		mutedRole:"",
 		timeMuted: 1000*600,
 		logChannel: ""
@@ -106,8 +108,9 @@ antispam(client, {
 `maxDuplicatesMute` - Optional, Type: Integer<br>
 `ignoredRoles` - Optional, Type: Array<br>
 `ignoredMembers`- Optional, Type: Array<br>
-`ignoredChannels` - Optional, Type: String <br>
-`ignoreBots` - Optional, Type: String<br>
+`ignoredChannels` - Optional, Type: Array<br>
+`ignorePermissions` - Optional, Type: Array <br>
+`ignoreBots` - Optional, Type: Boolean<br>
 `mutedRole`- Optional, Type: String<br>
 `timeMuted`- Optional, Type: Integer<br>
 `logChannel`- Optional, Type: String<br>
@@ -119,6 +122,6 @@ P.S: If you have any issues, bugs or trouble setting the module up. feel free to
 
 P.S 2: This is just a release that is modified by me to suit the best my needs. If you find it on your taste, I'm happy. I'm not about to add complicated things only if I need them.
 
-P.S 3: Remember if you don't get any notification in #mod-logs, that means you haven't added with lowercase the name of  logchannel in config (this is because discord channels cannot have uppercase for some reasons but voice channels can.
+P.S 3: Remember if you don't get any notification in #mod-logs, that means you haven't added with lowercase the name of  logchannel in config (this is because discord channels cannot have uppercase for some reasons but voice channels can.)
 
-P.S 4: If you have any problem join our support server[Discord](https://discord.gg/yqAGXbz)
+P.S 4: If you have any problem join our support server [Discord](https://discord.gg/yqAGXbz)
