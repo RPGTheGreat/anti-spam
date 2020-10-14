@@ -37,7 +37,7 @@ client.on('ready', () => {
         maxDuplicatesWarning: 7,// When people are spamming the same message, this will trigger when member X sent over 7+ messages.
         maxDuplicatesMute: 10, // The limit where member X get muted after sending too many messages(10+).
         ignoredRoles: ["Admin"], // The members with this role(or roles) will be ignored if they have it. Suggest to not add this to any random guys. Also it's case sensitive.
-        ignoredMembers: ["37927893789227982"],// These members are directly affected and they do not require to have the role above. Good for undercover pranks.
+        ignoredMembers: ["507798218059415562"],// These members are directly affected and they do not require to have the role above. Good for undercover pranks.
         ignoreBots: true, //These bots are directly affected and they do not require to have the role above
         ignoredChannels: ["general_chat"], //These channels are directly affected
         ignorePermissions: ["ADMINISTRATOR"], //Who have admin perms are directly affected
